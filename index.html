@@ -3,37 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>t r o p i c a s</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+    <title>x</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
 
-    <div class="container">
-        <span class="star"></span>
-        <span class="star pink"></span>
-        <span class="star blue"></span>
-        <span class="star yellow"></span>
-        <div class="main-menu">
-            <h1>tropicas</h1>
-            <p class="blue-background">Welcome to my portfolio.</div>
+    <div class="container mt-5" id="nameplate">
+        <div class="row align-items-stretch">
+            <div class="col-md-6 d-flex m-0">
+                <div class="bordered d-flex">
+                    <h1 class="me-2 mb-0"><span class="spacer">tro</span>picas</h1>
+                    <p class="text-uppercase mb-2 text-end px-4 pt-4">Web Developer &<br>Digital Strategist</p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex m-0">
+                <div class="bordered pt-4">
+                    <p>To me, web development isn’t just about code — it’s about people. 
+                        I love building tools and experiences that make users feel seen, supported, and understood. 
+                        That’s the kind of work I want to keep doing.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
+<div class="container">
+    <hr>
+</div>
 
-    <div class="dia-box"></div>
-    <div class="dia-box"></div>
-    <div class="dia-box"></div>
-    <div class="dia-box"></div>
-    <div class="dia-box"></div>
+<div class="container">
+    <div class="row align-items-stretch">
+            <marquee class="skills text-uppercase" style="behavior="scroll" direction="left" scrollamount="10" >
+                <span text="text-uppercase">CRM</span>
+                <span class="spacer">x</span>
+                <span text="text-uppercase">WordPress</span>
+                <span class="spacer">x</span>
+                <span text="text-uppercase">Bootstrap</span>
+                <span class="spacer">x</span>
+                <span text="text-uppercase">HTML5/CSS3/Javascript</span>
+                <span class="spacer">x</span>
+                <span text="text-uppercase">SEO Analytics</span>
+                <span class="spacer">x</span>
+                <span text="text-uppercase">E-COMMERCE</span>
+            </marquee>
+    </div>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+<div class="container">
+    <h1>Projects</h1>
+    <div class="row align-items-stretch">
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="img\bbtb.png" alt="Bells by the Beach Website">
+                <div class="overlay">
+                    <h5>Bells by the Beach</h5>
+                    <p>A wedding website created for newlywebs to recieve their RSVPS and Registry</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="img\rc.png" alt="Rachael Consulting Website">
+                <div class="overlay">
+                    <h5>Rachael Consulting</h5>
+                    <p>Government Consulting.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="img\tsa1.png" alt="Titan School Academy">
+                <div class="overlay">
+                    <h5>Develop My Speed</h5>
+                    <p>Training and academy site.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="img\DT.png" alt="Diaster">
+                <div class="overlay">
+                    <h5>ISC</h5>
+                    <p>Management of grants and lorem.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="img\ab.png" alt="Assessment Board">
+                <div class="overlay">
+                    <h5>Assessment Project</h5>
+                    <p>Live API of movement within grant mangement system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <div class="dia-box-grey"></div>
-  <div class="dia-box-grey"></div>
-  <div class="dia-box-grey"></div>
-  <div class="dia-box-grey"></div>
- 
+<div class="container">
+    <hr>
+</div>
+
+
+<div class="container">
+    <h1 class="text-end">History</h1>
+        <div class="row align-items-stretch">
+            <div class="col-md-6 d-flex m-0">
+                <ul>
+                    <li>List here</li>
+                    <li>List here</li>
+                    <li>List here</li>
+                    <li>List here</li>
+                    <li>List here</li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+<script>
+    const items = document.querySelectorAll('.project-item');
+
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
