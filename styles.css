@@ -18,13 +18,19 @@ body {
 
 p {
   display: block;
-  margin-bottom: 10px; 
+  margin-bottom: 10px; /* Adds some space between paragraphs */
 }
 
 h1 {
   font-family: "Special Gothic Expanded One", sans-serif;
   font-size:4em;
   animation: pulsate-fwd-normal 1s ease 0s 1 normal none; 
+}
+
+h2 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size:2em;
+  color:#f5f4f0;
 }
 
 hr {
@@ -35,7 +41,7 @@ hr {
 }
 
 .shifted {
-  margin-left: 50px;
+  margin-left: 50px; /* adjust the px as needed */
   margin-top:-30px;
   animation: pulsate-fwd-normal 1s ease 0s 1 normal none; 
 }
@@ -64,6 +70,10 @@ hr {
   overflow: hidden;
 }
 
+.project-text {
+  color:#f5f4f0;
+}
+
 .project-item {
   position: relative;
   flex: 1;
@@ -86,8 +96,7 @@ hr {
   inset: 0;
   opacity: 0;
   transition: opacity 0.5s ease;
-  background-color: #E1734A;
-  mix-blend-mode: exclusion;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -117,4 +126,41 @@ hr {
 
 .project-item.active .overlay {
   opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .project-gallery {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-item {
+    flex: none;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .project-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-item.active {
+    flex: none;
+  }
+
+  .project-item .overlay {
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-item .overlay h5 {
+    font-size: 1.25rem;
+  }
+
+  .project-item .overlay p {
+    font-size: 0.9rem;
+  }
 }
