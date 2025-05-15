@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>esnow — web developer</title>
+  <link rel="icon" type="image/x-icon" href="../src/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Special+Gothic+Expanded+One&display=swap"
+    rel="stylesheet">
+  <link href="../src/output.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Ensure the body takes up the full height and doesn't scroll */
+    body {
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    /* Main scroll container */
+    .scroll-container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+    
+    /* Each section snaps */
+    .snap-section {
+      scroll-snap-align: start;
+      min-height: 100vh;
+    }
+  </style>
+
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Header -->
+  <header class="text-white font-sans sticky top-0 z-50">
+    <div class="lg:w-[80%] mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-400 focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!-- Icon when menu is closed -->
+            <svg id="open-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <!-- Icon when menu is open -->
+            <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start ">
+          <a href="#" class="text-3xl font-serif text-orange">esnow</a>
+        </div>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a href="#about"
+              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium">About</a>
+            <a href="#portfolio"
+              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium">Portfolio</a>
+            <a href="#experience"
+              class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Experience</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sm:hidden" id="mobile-menu" style="display: none;">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      
+      <a href="#"
+        class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">About</a>
+      <a href="#"
+        class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Portfolio</a>
+        <a href="#experience"
+        class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Experience</a>
+    </div>
+  </div>
+
+  <!-- Main scrollable container -->
+  <div class="scroll-container">
+
+  <!-- Heading -->
+    <!-- <div class="snap-section">
+      <div class="w-full min-h-screen flex items-center pt-16">
+        <div class="w-full lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 flex flex-col gap-4 pt-10 pb-10">
+           <h1 class="text-orange font-serif text-9xl text-right">esnow</h1>
+           <p class="text-right font-semibold">Developer / Marketing</p>
+        </div>
+      </div>
+    </div> -->
+    
+    <!-- About Me Section -->    
+    <div class="snap-section">
+      <div class="w-full min-h-screen flex items-center pt-16">
+        <div class="w-full lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 flex flex-col gap-4 pb-10">
+          <!-- Title -->
+          <div class="flex flex-col gap-2 mb-2 md:mb-4" id="about">
+            <h2 class="text-4xl font-serif text-orange font-semibold">About Me</h2>
+          </div>
+
+          <h4 class="capitalize text-xl font-semibold">Hello, my name is Emma Snowden and I'm
+            <span class="text-orange">web developer and marketing specialist</span>
+          </h4>
+          <p class="">I'm a developer / marketing specialist based in Greater Houston, Texas. I'm passionate about technology and puzzles.</p>
+
+          <div class="w-full flex flex-col lg:flex-row gap-6 sm:gap-4 lg:gap-6 justify-between">
+            <!-- Col 1 -->
+            <div class="w-full flex flex-col items-stretch gap-4">
+              <!-- col 1 -->
+              <div class="flex flex-col sm:flex-row gap-2 md:gap-6 items-center justify-between font-serif">
+                <!-- 1 -->
+                <ul class="w-full">
+                  <li class="py-2 border-b border-gray-200 ">Experience : Ten Years</li>
+                  <li class="py-2 border-b border-gray-200 ">Degree : Computer Information Systems</li>
+                  <li class="py-2 border-b border-gray-200 ">Location : Greater Houston, Texas</li>
+                </ul>
+                <!-- 2 -->
+                <ul class="w-full font-serif">
+                  <li class="py-2 border-b border-gray-200">Email : emma.l.snowden@gmail.com</li>
+                  <li class="py-2 border-b border-gray-200">Employment : Available</li>
+                  <li class="py-2 border-b border-gray-200">Freelance : Available</li>
+                </ul>
+              </div>
+              <!-- col 2 Buttons -->
+              <div class="flex gap-4 justify-center sm:justify-start">
+                <button onclick="window.location.href='mailto:emma.l.snowden@gmail.com?subject=Interested in Hiring'" class="px-4 sm:px-6 py-2 bg-orange rounded-full text-white font-bold" >Hire me</button>
+              </div>
+            </div>
+            <!-- col 2 -->
+            <div class="w-full flex flex-col gap-2">
+              <!-- Progress bar 1 -->
+              <div class="flex flex-col gap-2">
+                <div class="w-full flex justify-between font-semibold">
+                  <span>WordPress</span>
+                  <span>92 %</span>
+                </div>
+                <!-- Progress bar -->
+                <div class="w-full bg-black rounded-full">
+                  <div class="w-[92%] h-2 bg-orange  rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Progress bar 2 -->
+              <div class="flex flex-col gap-2">
+                <div class="w-full flex justify-between font-semibold">
+                  <span>HTML/CSS/Javascript</span>
+                  <span>90 %</span>
+                </div>
+                <!-- Progress bar -->
+                <div class="w-full bg-black rounded-full">
+                  <div class="w-[90%] h-2 bg-orange rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Progress bar 3 -->
+              <div class="flex flex-col gap-2">
+                <div class="w-full flex justify-between font-semibold">
+                  <span>Graphic Design</span>
+                  <span>80 %</span>
+                </div>
+                <!-- Progress bar -->
+                <div class="w-full bg-black  rounded-full">
+                  <div class="w-[80%] h-2 bg-orange  rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Progress bar 4 -->
+              <div class="flex flex-col gap-2">
+                <div class="w-full flex justify-between font-semibold">
+                  <span>SEO</span>
+                  <span>85 %</span>
+                </div>
+                <!-- Progress bar -->
+                <div class="w-full bg-black rounded-full">
+                  <div class="w-[85%] h-2 bg-orange  rounded-full"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="snap-section">
+      <div class="w-full min-h-screen flex items-center pt-16">
+      <div class="w-full lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 flex flex-col min-h-screen gap-4 pb-10 pt-16">
+        <h2 class="text-4xl font-serif text-orange font-semibold" id="portfolio">Portfolio</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 p-2 ">
+
+          <div class="p-4">
+
+            <button class="p-2 rounded-[10px] cursor-default">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 4V5M12 19V20M5.07178 8L5.9378 8.5M18.0622 15.5L18.9282 16M18.9282 7.99999L18.0622 8.49999M5.93781 15.5L5.07178 16M16 12C16 9.79086 14.2091 8 12 8C9.79084 8 7.99998 9.79086 7.99998 12C7.99998 14.2091 9.79084 16 12 16C14.2091 16 16 14.2091 16 12Z"
+                  stroke="#252432" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <p class="font-serif text-lg text-orange my-5">Web Development</p>
+            <p class="text-sm font-[400] h-1/3">I've worked on a range of WordPress-based websites for small businesses and personal projects. 
+              I’m passionate about developing functional, user-friendly sites and am eager to contribute that same energy and skill to your team.</p>
+
+            <div class="group relative w-fit overflow-hidden rounded-[10px] mt-5">
+              <img class="object-center transition duration-300 ease-in-out transform group-hover:scale-110"
+                src="../src/assets/images/tjs.png" alt="Pictures" />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="p-4">
+
+            <button class="p-2 rounded-[10px] cursor-default">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2442 4.86956C11.0022 3.47968 12.9979 3.47968 13.7559 4.86956L14.9723 7.09993C15.2599 7.62738 15.7694 7.99758 16.36 8.10817L18.8571 8.57579C20.4132 8.86719 21.0299 10.7653 19.9422 11.9157L18.1969 13.7617C17.7842 14.1983 17.5895 14.7973 17.6668 15.3931L17.9938 17.9125C18.1975 19.4824 16.5829 20.6555 15.1527 19.9766L12.8577 18.8871C12.3149 18.6295 11.6851 18.6295 11.1424 18.8871L8.84732 19.9766C7.41713 20.6555 5.80257 19.4824 6.00629 17.9125L6.3332 15.3931C6.41051 14.7973 6.21588 14.1983 5.80313 13.7617L4.05781 11.9157C2.97019 10.7653 3.58689 8.86719 5.14299 8.57579L7.64007 8.10817C8.2306 7.99758 8.74014 7.62738 9.02779 7.09993L10.2442 4.86956Z"
+                  stroke="#252432" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+
+            </button>
+
+            <p class="font-serif text-lg text-orange my-5">Graphic Design</p>
+
+            <p class="text-sm font-[400] h-1/3 ">In graphic design, I work with tools like Photoshop, Illustrator, Canva, and Clip Studio. My experience includes creating visuals for webinars, 
+              YouTube and band logos, as well as designing mockups for products and websites. I enjoy combining creativity with practical design solutions to support a variety of projects.</p>
+
+            <div class="group relative w-fit overflow-hidden rounded-[10px] mt-5">
+              <img class="object-center transition duration-300 ease-in-out transform group-hover:scale-110"
+                src="../src/assets/images/sp.png" alt="Pictures" />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="p-4">
+
+            <button class="p-2 rounded-[10px] cursor-default">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 18H6C4.34315 18 3 16.6569 3 15V6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V15C21 16.6569 19.6569 18 18 18H14M10 18V21M10 18H14M14 18V21M10 21H14M10 21H9M14 21H15"
+                  stroke="#252432" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </button>
+
+            <p class="font-serif text-lg text-orange my-5">Marketing</p>
+
+            <p class="text-sm font-[400] h-1/3">In marketing, I focus on content writing and SEO to help give your business both value and direction. 
+              I also incorporate design to highlight your brand's unique style and charm, creating a engaging presence for your business.</p>
+
+            <div class="group relative w-fit overflow-hidden rounded-[10px] mt-5">
+              <img class="object-center transition duration-300 ease-in-out transform group-hover:scale-110"
+                src="../src/assets/images/wingsover.png" alt="Pictures" />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="p-4">
+
+            <button class="p-2 rounded-[10px] cursor-default">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.01005 11.75C9.42426 11.75 9.76005 11.4142 9.76005 11C9.76005 10.5858 9.42426 10.25 9.01005 10.25V11.75ZM9.00005 10.25C8.58583 10.25 8.25005 10.5858 8.25005 11C8.25005 11.4142 8.58583 11.75 9.00005 11.75V10.25ZM15.01 11.75C15.4243 11.75 15.76 11.4142 15.76 11C15.76 10.5858 15.4243 10.25 15.01 10.25V11.75ZM15 10.25C14.5858 10.25 14.25 10.5858 14.25 11C14.25 11.4142 14.5858 11.75 15 11.75V10.25ZM6.77814 8.75H17.222V7.25H6.77814V8.75ZM19.4653 10.8274L20.0038 17.8274L21.4994 17.7124L20.9609 10.7124L19.4653 10.8274ZM17.7604 20.25H6.23968V21.75H17.7604V20.25ZM3.99631 17.8274L4.53477 10.8274L3.03919 10.7124L2.50073 17.7124L3.99631 17.8274ZM6.23968 20.25C4.92903 20.25 3.89579 19.1342 3.99631 17.8274L2.50073 17.7124C2.33319 19.8904 4.05527 21.75 6.23968 21.75V20.25ZM20.0038 17.8274C20.1043 19.1342 19.0711 20.25 17.7604 20.25V21.75C19.9448 21.75 21.6669 19.8904 21.4994 17.7124L20.0038 17.8274ZM17.222 8.75C18.3977 8.75 19.3752 9.65519 19.4653 10.8274L20.9609 10.7124C20.8106 8.75865 19.1815 7.25 17.222 7.25V8.75ZM6.77814 7.25C4.81863 7.25 3.18947 8.75865 3.03919 10.7124L4.53477 10.8274C4.62494 9.65519 5.60244 8.75 6.77814 8.75V7.25ZM14.25 6V8H15.75V6H14.25ZM9.75005 8V6H8.25005V8H9.75005ZM12 3.75C13.2427 3.75 14.25 4.75736 14.25 6H15.75C15.75 3.92893 14.0711 2.25 12 2.25V3.75ZM12 2.25C9.92898 2.25 8.25005 3.92893 8.25005 6H9.75005C9.75005 4.75736 10.7574 3.75 12 3.75V2.25ZM9.01005 10.25H9.00005V11.75H9.01005V10.25ZM15.01 10.25H15V11.75H15.01V10.25Z"
+                  fill="#252432" />
+              </svg>
+
+            </button>
+
+            <p class="font-serif text-lg text-orange my-5">Dashboards</p>
+
+            <p class="text-sm font-[400] h-1/3">I'm able to create visual dashboards for your business using Javascript, Power BI, and ArcGIS through RestAPIs. 
+              I can design and build dashboards that provide clear, actionable insights, helping you better understand your data.</p>
+
+            <div class="group relative w-fit overflow-hidden rounded-[10px] mt-5">
+              <img class="object-center transition duration-300 ease-in-out transform group-hover:scale-110"
+                src="../src/assets/images/dash.png" alt="Pictures" />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="snap-section">
+      <div class="w-full lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 flex-col gap-4 w-full flex min-h-screen pt-16" id="experience">
+        <h2 class="text-4xl font-serif text-orange font-semibold">Experience</h2>
+        <div class="flex flex-col grid-cols-9 p-2 mx-auto md:grid lg:w-[60%]">
+          <div class="flex md:contents flex-row-reverse">
+            <div
+              class="relative p-4 my-6 text-white bg-black rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
+              <p class="font-serif text-lg text-orange">Development Supervisor</p>
+              <h3 class="text-lg font-semibold lg:text-xl">InternetIT</h3>
+              <p class="mt-2 leading-6">Remote development supervisor for web development and digital solutions for small
+                businesses.</p>
+              <span class="absolute text-sm text-orange-100/75 -top-5 left-2 whitespace-nowrap">Sept. 2023 -
+                Current</span>
+            </div>
+            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+              <div class="flex items-center justify-center w-6 h-full">
+                <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-orange to-orange">
+                </div>
+              </div>
+              <div class="absolute w-6 h-6 -mt-3 border-4 border-white rounded-full top-1/2"></div>
+            </div>
+          </div>
+
+          <div class="flex md:contents">
+            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+              <div class="flex items-center justify-center w-6 h-full">
+                <div class="w-1 h-full bg-orange"></div>
+              </div>
+              <div class="absolute w-6 h-6 -mt-3 border-4 border-white rounded-full top-1/2"></div>
+            </div>
+            <div class="relative p-4 my-6 text-white rounded-xl col-start-6 col-end-10 mr-auto">
+              <p class="font-serif text-lg text-orange">Marketing Specialist / Application Developer</p>
+              <h3 class="text-lg font-semibold lg:text-xl">Integrated Solutions Consulting</h3>
+              <p class="mt-2 leading-6">
+                Remote full-time helpdesk and database manager of several emergency management aspects including grant
+                management,
+                site inspections, and FEMA cadre.</p>
+              <span class="absolute text-sm text-white -top-5 left-2 whitespace-nowrap">June 2022 - August 2023</span>
+            </div>
+          </div>
+
+          <div class="flex md:contents flex-row-reverse">
+            <div class="relative p-4 my-6 text-whtie rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
+              <p class="font-serif text-lg text-orange">Computer Information Systems and Accounting Tutor</p>
+              <h3 class="text-lg font-semibold lg:text-xl">Mid Michigan College</h3>
+              <p class="mt-2 leading-6">Developed a curriculum on advanced Microsoft Office Suite items such as pivot
+                tables, data management, SQL, VBA,
+                queries, and macros.</p>
+              <span class="absolute text-sm text-white -top-5 left-2 whitespace-nowrap">Jan. 2019 - May 2020</span>
+            </div>
+            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+              <div class="flex items-center justify-center w-6 h-full">
+                <div class="w-1 h-full bg-white rounded-t-full bg-gradient-to-b from-orange to-black">
+                </div>
+              </div>
+              <div class="absolute w-6 h-6 -mt-3 border-4 border-white rounded-full top-1/2"></div>
+            </div>
+          </div>
+
+          <div class="flex md:contents">
+            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+              <div class="flex items-center justify-center w-6 h-full">
+                <div class="w-1 h-full bg-black"></div>
+              </div>
+              <div class="absolute w-6 h-6 -mt-3 border-4 border-white rounded-full top-1/2"></div>
+            </div>
+            <div class="relative p-4 my-6 text-white rounded-xl col-start-6 col-end-10 mr-auto">
+              <p class="font-serif text-lg text-orange">Computer Information Systems</p>
+              <h3 class="text-lg font-semibold lg:text-xl">Mid Michigan College</h3>
+              <p class="mt-2 leading-6 pb-10">Associate in Applied Science | 3.722 GPA<br>
+                Awarded with Special Recoginition Award<br>(Special Recognition Awards are awarded to Mid students who are
+                outstanding performers in academics, leadership, volunteerism, and other areas.)</p>
+              <span class="absolute text-sm text-white -top-5 left-2 whitespace-nowrap">2017 - 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('open-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+        openIcon.classList.add('hidden');
+        openIcon.classList.remove('block');
+        closeIcon.classList.add('block');
+        closeIcon.classList.remove('hidden');
+      } else {
+        menu.style.display = 'none';
+        openIcon.classList.add('block');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        closeIcon.classList.remove('block');
+      }
+    });
+  </script>
+</body>
+
+</html>
