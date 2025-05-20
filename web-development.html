@@ -13,113 +13,115 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="output.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-  <style>
-    /* Ensure the body takes up the full height and doesn't scroll */
-    body {
-      height: 100vh;
-      overflow: hidden;
-    }
+    <style>
+        /* Ensure the body takes up the full height and doesn't scroll */
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .font-rajdhani {
-      font-family: 'Rajdhani', sans-serif;
-    }
+        .font-rajdhani {
+            font-family: 'Rajdhani', sans-serif;
+        }
 
-    .font-special {
-      font-family: 'Special Gothic Expanded One', serif;
-    }
-    .stroke-text {
-    color: transparent;
-    -webkit-text-stroke: 1px #D83C02;
-  }
-  </style>
+        .font-special {
+            font-family: 'Special Gothic Expanded One', serif;
+        }
+
+        .stroke-text {
+            color: transparent;
+            -webkit-text-stroke: 1px #D83C02;
+        }
+    </style>
 
 
 <body class="bg-black text-white font-rajdhani">
 
-    
-  <!-- Header -->
-  <header class="text-white font-sans sticky top-0 z-50">
-    <div class="lg:w-[80%] mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-400 focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!-- Icon when menu is closed -->
-            <svg id="open-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <!-- Icon when menu is open -->
-            <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start ">
-          <a href="#" class="text-3xl font-special text-orange">esnow</a>
-        </div>
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-4">
+
+    <!-- Header -->
+    <header class="text-white font-sans sticky top-0 z-50">
+        <div class="lg:w-[80%] mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-400 focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed -->
+                        <svg id="open-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <!-- Icon when menu is open -->
+                        <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start ">
+                    <a href="#" class="text-3xl font-special text-orange">esnow</a>
+                </div>
+                <div class="hidden sm:block sm:ml-6">
+                    <div class="flex space-x-4">
+                        <a href="index.html#about"
+                            class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium font-rajdhani">About</a>
+                        <a href="index.html#portfolio"
+                            class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium font-rajdhani">Portfolio</a>
+                        <a href="indiex.html#experience"
+                            class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium font-rajdhani">Experience</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <div class="sm:hidden" id="mobile-menu" style="display: none;">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+
             <a href="index.html#about"
-              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium font-rajdhani">About</a>
+                class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">About</a>
             <a href="index.html#portfolio"
-              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium font-rajdhani">Portfolio</a>
-            <a href="indiex.html#experience"
-              class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium font-rajdhani">Experience</a>
-          </div>
+                class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Portfolio</a>
+            <a href="#experience"
+                class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Experience</a>
         </div>
-      </div>
-  </header>
-
-  <div class="sm:hidden" id="mobile-menu" style="display: none;">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-
-      <a href="index.html#about"
-        class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">About</a>
-      <a href="index.html#portfolio"
-        class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Portfolio</a>
-      <a href="#experience"
-        class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Experience</a>
     </div>
-  </div>
 
 
-<div class="flex flex-col md:grid md:grid-cols-3 gap-3 mt-10">
-  <div class="relative rounded overflow-hidden">
-    <img src="../assets/images/tjs.png" alt="Website for Athletes" class="w-full">
-    <p
-      class="cursor-pointer absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
-      TSA
-    </p>
-  </div>
-  <div class="relative rounded overflow-hidden">
-    <img src="../assets/images/rc.png" alt="Website for Consulting" class="w-full">
-    <p
-      class="cursor-pointer absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
-      Rachael Consulting
-    </p>
-  </div>
-    <div class="relative rounded overflow-hidden">
-    <img src="../assets/images/isc.png" alt="Website for Disaster Management" class="w-full">
-    <p
-      class="cursor-pointer absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
-      ISC
-    </p>
-  </div>
-      <div class="relative rounded overflow-hidden">
-    <img src="../assets/images/bbtb.png" alt="Website for a Wedding" class="w-full">
-    <p
-      class="cursor-pointer absolute inset-2 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
-      Bells By the Beach
-    </p>
-    <p class="font-rajdhani text-white absolute inset-1">2025 - Wedding website for a couple built in WordPress</p>
-  </div>
-</div>
+    <div class="flex flex-col md:grid md:grid-cols-3 gap-3 mt-10">
+        <div class="relative rounded overflow-hidden">
+            <img src="../assets/images/tjs.png" alt="Website for Athletes" class="w-full">
+            <p
+                class="cursor-pointer absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
+                TSA
+            </p>
+        </div>
+        <div class="relative rounded overflow-hidden">
+            <img src="../assets/images/rc.png" alt="Website for Consulting" class="w-full">
+            <p
+                class="cursor-pointer absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
+                Rachael Consulting
+            </p>
+        </div>
+        <div class="relative rounded overflow-hidden">
+            <img src="../assets/images/isc.png" alt="Website for Disaster Management" class="w-full">
+            <p
+                class="cursor-pointer absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-2xl text-center text-white py-2 border-b border-gray-200  font-special font-medium group-hover:bg-opacity-60 transition">
+                ISC
+            </p>
+        </div>
+        <div class="relative rounded overflow-hidden">
+            <img src="../assets/images/bbtb.png" alt="Website for a Wedding" class="w-full">
+            <div
+                class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-4">
+                <p class="text-2xl font-special font-medium">Bells By the Beach</p>
+                <p class="font-rajdhani mt-2 text-white">2025 - Wedding website for a couple built in WordPress</p>
+            </div>
+        </div>
+    </div>
 
 </body>
