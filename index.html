@@ -42,6 +42,10 @@
     .font-special {
       font-family: 'Special Gothic Expanded One', serif;
     }
+    .stroke-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #D83C02;
+  }
   </style>
 
 </head>
@@ -76,11 +80,11 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             <a href="#about"
-              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium">About</a>
+              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium font-rajdhani">About</a>
             <a href="#portfolio"
-              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium">Portfolio</a>
+              class="text-white hover:bg-orange hover:text-white px-3 py-2 rounded-md text-lg font-medium font-rajdhani">Portfolio</a>
             <a href="#experience"
-              class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Experience</a>
+              class="text-white hover:bg-orange hover:text-white block px-3 py-2 rounded-md text-lg font-medium font-rajdhani">Experience</a>
           </div>
         </div>
       </div>
@@ -110,6 +114,22 @@
         </div>
       </div>
     </div> -->
+
+    <!-- Title Section // Need to add graphic/3d -->
+    <div class="snap-section">
+      <div class="w-full min-h-screen flex items-center pt-16">
+        <div class="w-full lg:w-[80%] mx-auto px-4 justify-center items-center pt-16 sm:px-10 lg:px-0 flex flex-col gap-4 pb-10">
+            <div class="relative w-fit overflow-hidden">
+              <span class="absolute top-[-8px] right-0 text-9xl font-special text-orange -z-10 stroke-text text-right whitespace-nowrap">esnow</span>
+              <span class="absolute top-[-16px] right-0 text-9xl font-special text-orange -z-20 stroke-text text-right whitespace-nowrap">esnow</span>
+              <span class="block text-orange font-special text-9xl text-right">esnow</span>
+            </div>
+
+           <p class="text-right font-rajdhani">Web Developer / Marketing Specialist</p>
+        </div>
+      </div>
+    </div>
+
 
     <!-- About Me Section -->
     <div class="snap-section">
@@ -401,7 +421,7 @@
               <div class="relative p-4 my-6 text-white rounded-xl col-start-6 col-end-10 mr-auto">
                 <p class="font-special text-lg text-orange">Computer Information Systems</p>
                 <h3 class="text-lg font-semibold lg:text-xl">Mid Michigan College</h3>
-                <p class="mt-2 leading-6 pb-10">Associate in Applied Science | 3.722 GPA<br>
+                <p class="mt-2 mb-8 leading-6 pb-10">Associate in Applied Science | 3.722 GPA<br>
                   Awarded with Special Recoginition Award<br>(Special Recognition Awards are awarded to Mid students who
                   are
                   outstanding performers in academics, leadership, volunteerism, and other areas.)</p>
